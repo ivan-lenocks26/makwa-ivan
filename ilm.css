@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: hsl(8, 45%, 86%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.container {
+  display: flex;
+  gap: 20px; /* space between containers */
+  width: 95%;
+  max-width: 1200px;
+  background: transparent;
+  align-items: flex-start; /* align top, middle taller */
+}
+
+.box {
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  background: #fff;
+}
+
+/* Left */
+.left {
+  flex: 1;
+  background: #eaf4fc;
+  min-height: 350px; /* shorter */
+}
+
+/* Middle */
+.middle {
+  flex: 2;
+  background: #ffffff;
+  min-height: 500px; /* taller */
+  padding: 40px 20px; /* extra padding for emphasis */
+  border: 2px solid #ddd;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15); /* make it stand out */
+  transform: scale(1.02); /* slightly larger */
+  z-index: 2; /* bring forward */
+}
+
+/* Right */
+.right {
+  flex: 1;
+  background: #fdf1e6;
+  min-height: 350px; /* shorter */
+}
+
+img.profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 5px solid #555;
+}
+
+h1, h2 {
+  margin: 10px 0;
+  color: #333;
+}
+
+a.whatsapp {
+  display: inline-block;
+  margin: 15px 0;
+  padding: 12px 25px;
+  background: #25d366;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+a.whatsapp:hover {
+  background: #1ebc57;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  color: #444;
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .middle {
+    transform: none;
+    min-height: auto;
+}
+}
